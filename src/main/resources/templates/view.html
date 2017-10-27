@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Watch Shop</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .btn1 {
+            width: 100%;
+        }
+
+        .btn2 {
+
+            width: 150px;
+            margin-right: 13px;
+        }
+
+        .auth {
+            float: left;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+        .tabel td {
+            padding: 10px 10px 10px 10px;
+        }
+
+        h1 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        h1 a:hover {
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+
+        /*a {*/
+        /*text-decoration: none;*/
+        /*color: white;*/
+        /*}*/
+
+        /*a:hover {*/
+        /*cursor: pointer;*/
+        /*color: white;*/
+        /*text-decoration: none;*/
+        /*text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <p></p>
+    <h1 style="text-align: center; font-weight: bold;  color: white;
+     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;"><a th:href="@{'/'}">Watch for You ;-)</a></h1>
+
+
+    <form style="width: 21%; margin: auto;" th:action="@{'/view/'+ ${watch.id}}" th:object="${watch}" th:method="PUT">
+
+        <table class="tabel">
+            <tr>
+                <td><label>Producator</label></td>
+                <input type="hidden" th:field="*{id}"/>
+                <td><input readonly="readonly" type="text" th:field="*{producator}"/></td>
+            </tr>
+            <tr>
+                <td><label>Pret</label></td>
+                <td><input readonly="readonly" type="number" th:field="*{pret}"/></td>
+            </tr>
+            <tr>
+                <td><label>Stil</label></td>
+                <td><input readonly="readonly" type="text" th:field="*{stil}"/></td>
+            </tr>
+            <tr>
+                <td><label>Gen</label></td>
+                <td><input readonly="readonly" type="text" th:field="*{gen}"/></td>
+            </tr>
+            <tr>
+                <td><label>Mecanism</label></td>
+                <td><input readonly="readonly" type="text" th:field="*{mecanism}"/></td>
+            </tr>
+            <tr>
+                <td><a class="btn btn-lg btn-warning btn1" th:href="@{'/addToCart/' + ${watch.id}}">Add to Cart</a></td>
+                <td><a th:href="@{/cart}" class="btn btn-info btn-lg">
+                    <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+                </a></td>
+            </tr>
+
+
+        </table>
+
+    </form>
+</div>
+
+</body>
+</html>

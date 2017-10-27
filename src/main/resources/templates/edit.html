@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style type="text/css">
+        .tabel td {
+            padding: 10px 10px 10px 10px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+    </style>
+    <title>Update or Add Watch</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form style="width: 21%; margin: auto;" th:action="@{'/edit/'+ ${watch.id}}" th:object="${watch}" th:method="PUT">
+    <h1 style="text-align: center; font-weight: bold;  color: white;
+     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;"><a th:href="@{'/'}">Watch for You ;-)</a></h1>
+    <table class="tabel">
+        <tr>
+            <td><label>Producator</label></td>
+            <input type="hidden" th:field="*{id}"/>
+            <td><input placeholder="Introdu producatorul" type="text" th:field="*{producator}"/></td>
+        </tr>
+        <tr>
+            <td><label>Pret</label></td>
+            <td><input placeholder="Introdu pretul" type="number" th:field="*{pret}"/></td>
+        </tr>
+        <tr>
+            <td><label>Stil</label></td>
+            <td><input placeholder="Introdu stilul" type="text" th:field="*{stil}"/></td>
+        </tr>
+        <tr>
+            <td><label>Gen</label></td>
+            <td><input placeholder="Introdu genul" type="text" th:field="*{gen}"/></td>
+        </tr>
+        <tr>
+            <td><label>Mecanism</label></td>
+            <td><input placeholder="Introdu mecanismul" type="text" th:field="*{mecanism}"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button class="btn btn-default btn-lg btn-block" type="submit">Save</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

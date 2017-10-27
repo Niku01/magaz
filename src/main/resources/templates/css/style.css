@@ -1,0 +1,451 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0; /* обнуляем отступы и убираем бордюры */
+    vertical-align: baseline; /* приводим все к одной базовой линии */
+    background: transparent; /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+    font-size: 100%; /* размер шрифта всем одинаковый */
+}
+
+a { /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    outline: none;
+}
+
+table { /* устраняем отступы между ячейками таблицы */
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, td img {
+    vertical-align: top; /* возвращаем привычное вертикальное выравнивание */
+}
+
+input, select, button, textarea {
+    margin: 0; /* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+    font-size: 100%; /* делаем размер шрифтов везде одинаковым */
+    outline: none;
+}
+
+input[type="text"], input[type="password"], textarea {
+    padding: 0; /* убираем внутренние отступы для текстовых полей */
+}
+
+input[type="checkbox"] { /* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+    vertical-align: bottom;
+}
+
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+/* --------------- /reset.css --------------- */
+
+/*
+Ремонт и отделка квартир, катеджей
+Капитальный ремонт
+Косметический ремнот
+Евро ремонт
+*/
+
+/* --------------- базовые настройки ---------*/
+html {
+    min-height: 100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+
+body {
+    color: #000;
+    text-align: left;
+    font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+    min-height: 100%;
+}
+
+a, a:visited { /* порядок правил для ссылок имеет значение */
+    color: #f63c3c;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #f63c3c;
+    text-decoration: none;
+}
+
+a:focus, a:active {
+    color: #f63c3c;
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+
+}
+
+img {
+
+    max-width: 100%;
+}
+
+.clr {
+    clear: both;
+}
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+/* --------------- /базовые настройки ---------*/
+
+body {
+    margin-top: 0;
+    background: url(../img/bg7.jpg) center fixed #000000;
+    background-size: 100%;
+    background-repeat: unset;
+}
+
+.syte {
+    margin: auto;
+    width: 70%;
+}
+
+/** {box-sizing: border-box;}*/
+
+.header-top {
+    z-index: 999;
+    /*background: url(../img/moskow.jpg);*/
+
+}
+
+header {
+    background: url("../img/logo.png") no-repeat 54% 32%;
+
+    /*text-align: center;*/
+    margin: 20px;
+}
+
+header a {
+    text-decoration: none;
+    outline: none;
+    display: block;
+    transition: .3s ease-in-out;
+}
+
+.logo {
+    float: left;
+    padding: 20px 0;
+    width: 350px;
+}
+
+/* phone */
+.phone {
+    float: right;
+    padding: 20px 0;
+    width: 295px;
+
+
+}
+
+.phone h1 {
+    font-weight: bold;
+    font-size: 40px;
+
+}
+
+.phone span {
+    font-weight: bold;
+
+}
+
+/* menu */
+.menu1,
+.menu1 ul,
+.menu1 li,
+.menu1 a {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.menu1 { /*Find this class in the css file*/
+    padding: 13px;
+    margin-bottom:20px;
+    height: 40px;
+    width: 100%; /*I changed this to a percentage of the page,*/
+    margin-left: auto; /*Then added these two margin styles.*/
+    margin-right: auto;
+
+    background: #4c4e5a;
+    background: -webkit-linear-gradient(top, #0177ff 0%, #2c2d33 50%);
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.menu1 li {
+    position: relative;
+    list-style: none;
+    float: left;
+    display: block;
+    height: 40px;
+}
+
+.menu1 li a {
+    display: block;
+    padding: 0 78px;
+    margin: 6px 0;
+    line-height: 28px;
+    text-decoration: none;
+
+    border-left: 1px solid #393942;
+    border-right: 1px solid #4f5058;
+
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+
+    color: #f3f3f3;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+
+    -webkit-transition: color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    -ms-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+}
+
+.menu1 li:first-child a {
+    border-left: none;
+}
+
+.menu1 li:last-child a {
+    border-right: none;
+}
+
+.menu1 li:hover > a {
+    color: #40f146;
+}
+
+.about ol{
+    margin-left: 100px;
+
+}
+.about1{
+    margin-left: 49px;
+
+}
+.menu1 ul {
+
+    position: absolute;
+    top: 40px;
+    left: 0;
+
+    opacity: 50;
+    background: #1f2024;
+
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+
+    -webkit-transition: opacity .25s ease .1s;
+    -moz-transition: opacity .25s ease .1s;
+    -o-transition: opacity .25s ease .1s;
+    -ms-transition: opacity .25s ease .1s;
+    transition: opacity .25s ease .1s;
+
+}
+
+.menu1 li:hover > ul {
+    opacity: 50;
+}
+
+.menu1 ul li {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+
+    -webkit-transition: height .25s ease .1s;
+    -moz-transition: height .25s ease .1s;
+    -o-transition: height .25s ease .1s;
+    -ms-transition: height .25s ease .1s;
+    transition: height .25s ease .1s;
+}
+
+.menu1 li:hover > ul li {
+    width: 100%;
+
+    height: 36px;
+    overflow: visible;
+    padding: 0;
+}
+
+.menu1 ul li a {
+    /*width: 100px;*/
+    padding: 4px 0 4px 40px;
+    margin: 0;
+
+    border: none;
+    border-bottom: 1px solid #353539;
+}
+
+.menu1 ul li:last-child a {
+    border: none;
+}
+
+/*     content    */
+
+.carousel {
+    /*max-width: 800px;*/
+    /*padding: 10px;*/
+}
+
+.carousel img {
+    height: 600px;
+
+    border-radius: 10px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.content {
+    /*background: rgba(64, 65, 76, 0.5);*/
+    padding: 10px;
+    min-height: 600px;
+    color: black;
+    border: #0177ff solid 3px;
+    width: 100%;
+    float: left;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+
+.about p {
+    text-indent: 1.5em; /* Отступ первой строки */
+    text-align: justify; /* Выравнивание по ширине */
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 37px;
+    color: #0177ff;
+    text-align: center;
+}
+
+.slogan {
+    color: #205098;
+
+}
+
+.work {
+    width: 148px;
+    float: left;
+
+}
+
+.work p {
+    margin-top: 15px;
+    margin-left: -25px;
+    text-align: center;
+    float: left;
+    width: 197px;
+}
+
+.works {
+    width: 952px;
+    margin: 0 auto;
+}
+
+.strel {
+    margin-top: 56px;
+}
+
+.works img {
+    margin-left: 5px;
+    margin-right: 5px;
+    float: left;
+}
+
+#amazingslider-wrapper-1 {
+    display: block;
+    position: relative;
+    max-width: 900px;
+    padding-left: 0;
+    padding-right: 232px;
+    margin: 0 auto 20px;
+}
+
+.contacts{
+    float: left;
+    width: 49%;
+    padding:5px;
+}
+.contacts span{
+    font-weight:bold;
+}
+.contacts h3{
+    font-size:30px;
+    color: #0177ff;
+}
+.contacts p{
+    font-style: italic;
+}
+
+.request{
+    text-align: center;
+    float: right;
+    width: 49%;
+    padding:5px;
+}
+
+input[type="text"], input[type="password"]{
+
+    padding: 5px;
+    border-color: #0177ff;
+    border-radius: 10px;
+    margin: 5px;
+}
+textarea{
+    border:2px solid #0177ff;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+}
+.request button{
+    padding: 10px;
+    border-radius: 10px;
+    border-style: outset;
+    background: linear-gradient(to bottom, #0177ff, #ffffff 132%);
+}

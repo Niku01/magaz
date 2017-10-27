@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <title>List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .btn1 {
+            width: 49%;
+        }
+
+        .btn2 {
+
+            width: 150px;
+            margin-right: 13px;
+        }
+
+        .auth {
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+        .tabel td {
+            padding: 10px 10px 10px 10px;
+        }
+
+        h1 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        h1 a:hover {
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <p></p>
+    <h1 style="text-align: center; font-weight: bold;  color: white;
+     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;"><a th:href="@{'/'}">Watch for You ;-)</a></h1>
+
+    <div class="auth">
+        <h4 style="float: left;">
+            Utilizatorul <span sec:authentication="name"></span>
+        </h4>
+    </div>
+<br/>
+    <h3>Shopping Cart</h3>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Pret</th>
+            <th>Delete</th>
+        </tr>
+        <tr th:each="item : ${cart}">
+            <td><a th:text="${item.id}" th:href="@{'/view/' + ${item.id}}"></a></td>
+
+            <td th:text="${item.producator}"></td>
+            <td th:text="${item.pret}"></td>
+
+            <td>
+                <button class="btn btn-danger">
+                    <a style="color: aliceblue" th:href="@{/removeToCart(id=${item.id})}">Delete</a>
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

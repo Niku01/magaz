@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Watch Shop</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+    <style>
+        .btn1 {
+            width: 32.6%;
+        }
+
+        .btn2 {
+
+            width: 150px;
+            margin-right: 13px;
+        }
+
+        .auth {
+            float: left;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+        h1 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        h1 a:hover {
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <p></p>
+    <h1 style="text-align: center; font-weight: bold;  color: white;
+     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;"><a th:href="@{'/'}">Watch for You ;-)</a></h1>
+
+    <div class="auth">
+        <h4 style="float: left;">
+            Te-ai autorizat ca utilizatorul <span sec:authentication="name"></span> cu drepturile: <span
+                sec:authentication="authorities"></span>
+        </h4>
+        <div style="float: left; margin-left:10px; margin-top:10px">
+            <form method="post" th:action="@{/logout}">
+                <input class="btn btn-xs btn2" value="Sing Out" type="submit"/>
+            </form>
+        </div>
+        <a th:href="@{/cart}" class="btn btn-info btn-lg">
+            <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+        </a>
+    </div>
+    <p style="float: right;">
+
+        <a class="btn btn-success btn2" th:href="@{'/edit/0'}">Add</a>
+    </p>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Producator</th>
+            <th>Pret</th>
+            <th>Stil</th>
+            <th>Gen</th>
+            <th>Mecanism</th>
+            <th>Actiuni</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="watch:${watches}">
+            <td><a th:text="${watch.id}" th:href="@{'/view/' + ${watch.id}}"></a></td>
+            <td th:text="${watch.producator}"></td>
+            <td th:text="${watch.pret}"></td>
+            <td th:text="${watch.stil}"></td>
+            <td th:text="${watch.gen}"></td>
+            <td th:text="${watch.mecanism}"></td>
+            <td>
+                <div sec:authorize="hasAuthority('ADMIN')">
+                    <a class="btn btn-info btn1" th:href="@{'/edit/' + ${watch.id}}">Edit</a>
+                    <a class="btn btn-danger btn1" th:href="@{'/delete/' + ${watch.id}}">Delete</a>
+                </div>
+                <a class="btn btn-warning btn1" th:href="@{'/addToCart/' + ${watch.id}}">Add to Cart</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

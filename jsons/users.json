@@ -1,0 +1,124 @@
+[
+  {
+    "id": 1,
+    "firstName": null,
+    "lastName": null,
+    "username": "Niku",
+    "password": "EliteBook",
+    "confirmPassword": null,
+    "roles": [
+      "ADMIN"
+    ]
+  },
+  {
+    "id": 2,
+    "firstName": null,
+    "lastName": null,
+    "username": "Nicu",
+    "password": "12345",
+    "confirmPassword": null,
+    "roles": [
+      "ADMIN",
+      "USER"
+    ]
+  },
+  {
+    "id": 3,
+    "firstName": "niku",
+    "lastName": "istrati",
+    "username": "user2",
+    "password": "1234",
+    "confirmPassword": "1234",
+    "roles": [
+      "USER"
+    ]
+  },
+  {
+    "id": 4,
+    "firstName": "niku",
+    "lastName": "istrati",
+    "username": "user1",
+    "password": "user1",
+    "confirmPassword": "user1",
+    "roles": [
+      "USER"
+    ]
+  },
+  {
+    "id": 5,
+    "firstName": "Niku",
+    "lastName": "Istrati",
+    "username": "user123",
+    "password": "1234",
+    "confirmPassword": "1234",
+    "roles": [
+      "USER"
+    ]
+  },
+  {
+    "id": 6,
+    "firstName": "niku",
+    "lastName": "niku",
+    "username": "niku2",
+    "password": "1234",
+    "confirmPassword": "1234",
+    "roles": [
+      "USER"
+    ]
+  },
+  {
+    "id": 7,
+    "firstName": "Nicu",
+    "lastName": "Istrati",
+    "username": "nikson",
+    "password": "1234",
+    "confirmPassword": "1234",
+    "roles": [
+      "USER"
+    ]
+  },
+  {
+    "id": 8,
+    "firstName": "gdfgfdgfd",
+    "lastName": "gfdgfdgfd",
+    "username": "fdgfdgfdgfd",
+    "password": "gfdgfd",
+    "confirmPassword": "",
+    "roles": [
+      "USER"
+    ]
+  },
+  {
+    "id": 9,
+    "firstName": "dddd",
+    "lastName": "dddd",
+    "username": "dddd",
+    "password": "1234",
+    "confirmPassword": "qwerty",
+    "roles": [
+      "USER"
+    ]
+  },
+  {
+    "id": 10,
+    "firstName": "aaaaaa",
+    "lastName": "aaaaaaa",
+    "username": "aaaa",
+    "password": "1234",
+    "confirmPassword": "qwerty",
+    "roles": [
+      "USER"
+    ]
+  },
+  {
+    "id": 11,
+    "firstName": "AltNicu",
+    "lastName": "AltIstrati",
+    "username": "user",
+    "password": "1234",
+    "confirmPassword": "123",
+    "roles": [
+      "USER"
+    ]
+  }
+]

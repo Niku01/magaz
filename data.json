@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "producator": "Ochstin",
+    "pret": 720,
+    "stil": "Sport",
+    "gen": "B",
+    "mecanism": "Mecanic"
+  },
+  {
+    "id": 2,
+    "producator": "SKMEI",
+    "pret": 250,
+    "stil": "Moda",
+    "gen": "B",
+    "mecanism": "Quartz"
+  },
+  {
+    "id": 3,
+    "producator": "ROODD",
+    "pret": 231,
+    "stil": "moda",
+    "gen": "F",
+    "mecanism": "Quartz"
+  },
+  {
+    "id": 4,
+    "producator": "Curren",
+    "pret": 300,
+    "stil": "Moda",
+    "gen": "F",
+    "mecanism": "Quartz"
+  },
+  {
+    "id": 5,
+    "producator": "Winner",
+    "pret": 400,
+    "stil": "Moda",
+    "gen": "B",
+    "mecanism": "Mecanic"
+  }
+]
